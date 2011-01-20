@@ -150,6 +150,9 @@ def game_loop():
 
 
 def end_game(status):
+    """
+    A function which displays a win or loss message.
+    """
     if status == "win":
         print("\n\nCongratz! You are a true Hangman Master!!!")
     elif status == "lose":

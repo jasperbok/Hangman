@@ -49,6 +49,8 @@ def initialize_game():
     guessedLetters = []
     letters = make_letter_list(pick_word())
 
+    update_screen()
+
     
 
 def handle_input(guess):
@@ -158,7 +160,13 @@ def end_game(status):
     elif status == "lose":
         print("\n\nHahaha you're such a loser! :D")
 
+    restart = input("Wanna play again? (y/n)")
+
+    if restart == "y" or restart == "Y":
+        initialize_game()
+    else:
+        pass
+
     
 
 initialize_game()
-update_screen()

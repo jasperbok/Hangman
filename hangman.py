@@ -1,7 +1,11 @@
 import random
 import os
 
-wordList = ["spam", "eggs", "cheese", "bryan", "python", "flying", "circus"]
+# wordList = ["spam", "eggs", "cheese", "bryan", "python", "flying", "circus"]
+wordList = []
+f = open('words.txt')
+for word in f.read().split():
+    wordList.append(word)
 guessesLeft = 0
 guessedLetters = []
 lastGuess = ""

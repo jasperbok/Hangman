@@ -119,7 +119,20 @@ def update_screen():
     elif lastGuess == "miss":
         print("Nice try, but that letter does not belong in this word.")
     print(4 * "\n")
-    
+
+    if guessesLeft < 6:
+        print(" _________     ");
+    if guessesLeft < 5:
+        print("|         |    ");
+    if guessesLeft < 4:
+        print("|         0    ");
+    if guessesLeft < 3:
+        print("|        /|\\  ");
+    if guessesLeft < 2:
+        print("|        / \\  ");
+    if guessesLeft < 1:
+        print("|              ");
+
     print("You have " + str(guessesLeft) + " guesses left.\n")
     print("You tried these letters already: " + str(sorted(guessedLetters)) + "\n\n")
     for letter in letters:

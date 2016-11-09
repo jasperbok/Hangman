@@ -110,7 +110,8 @@ def update_screen():
     global letters
 
     # Print 40 newline characters to clear the screen.
-    print(40 * "\n")
+    # print(40 * "\n")
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     if lastGuess == "double":
         print("You've already tried that letter!")

@@ -1,7 +1,6 @@
 import random
 import os
 
-# wordList = ["spam", "eggs", "cheese", "bryan", "python", "flying", "circus"]
 wordList = []
 f = open('words.txt')
 for word in f.read().split():
@@ -109,8 +108,8 @@ def update_screen():
     global guessedLetters
     global letters
 
-    # Print 40 newline characters to clear the screen.
-    print(40 * "\n")
+    # clear the screen
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     if lastGuess == "double":
         print("You've already tried that letter!")
